@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     container_name: json-formatter-app
     ports:
-      - "8080:80"
+      - "8090:80"
     restart: unless-stopped
     labels:
       - "com.json-formatter.description=JSON Formatter & Validator Web Application"
