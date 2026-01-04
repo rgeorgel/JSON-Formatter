@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Formatter & Validator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔧 JSON Formatter & Validator</h1>
+            <p class="subtitle">Format, validate, and convert your JSON data</p>
+        </header>
+
+        <div class="main-content">
+            <div class="input-section">
+                <div class="section-header">
+                    <h2>Input JSON</h2>
+                    <button id="clearBtn" class="btn btn-secondary">Clear</button>
+                </div>
+                <textarea id="jsonInput" placeholder='Paste your JSON here...&#10;Example: {"name": "John", "age": 30}'></textarea>
+
+                <div class="action-buttons">
+                    <button id="validateBtn" class="btn btn-primary">Validate JSON</button>
+                    <button id="formatBtn" class="btn btn-primary">Format JSON</button>
+                    <button id="convertBtn" class="btn btn-success">Convert to CSV</button>
+                    <button id="copyBtn" class="btn btn-secondary">Copy Output</button>
+                </div>
+            </div>
+
+            <div class="output-section">
+                <div class="section-header">
+                    <h2>Output</h2>
+                    <span id="outputType" class="output-type"></span>
+                </div>
+                <div id="output" class="output-box"></div>
+                <div id="error" class="error-box hidden"></div>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <div class="info-card">
+                <h3>✓ Validate</h3>
+                <p>Check if your JSON is valid and see detailed error messages</p>
+            </div>
+            <div class="info-card">
+                <h3>✨ Format</h3>
+                <p>Beautify your JSON with proper indentation and syntax highlighting</p>
+            </div>
+            <div class="info-card">
+                <h3>📊 Convert</h3>
+                <p>Transform JSON arrays into CSV format for spreadsheets</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>100% client-side processing - Your data never leaves your browser</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
