@@ -43,9 +43,34 @@ A lightweight, client-side JSON formatter, validator, and CSV converter. No back
 
 ## How to Run
 
+### Option 1: Direct Browser (Simplest)
+
 Simply open `index.html` in any modern web browser. No server or build process required!
 
-Alternatively, you can serve it with any static file server:
+### Option 2: Docker (Recommended)
+
+The easiest way to run the application with a proper web server:
+
+```bash
+# Start the application
+docker-compose up -d
+
+# View logs
+docker-compose logs -f
+
+# Stop the application
+docker-compose down
+```
+
+Then visit `http://localhost:8080`
+
+**Requirements:**
+- Docker
+- Docker Compose
+
+### Option 3: Static File Server
+
+You can serve it with any static file server:
 
 ```bash
 # Using Python
@@ -94,10 +119,13 @@ Works in all modern browsers:
 
 ```
 .
-├── index.html      # Main HTML structure
-├── styles.css      # All styling and responsive design
-├── app.js          # All JavaScript functionality
-└── README.md       # This file
+├── index.html           # Main HTML structure
+├── styles.css           # All styling and responsive design
+├── app.js               # All JavaScript functionality
+├── Dockerfile           # Docker configuration
+├── docker-compose.yml   # Docker Compose configuration
+├── .dockerignore        # Docker ignore file
+└── README.md            # This file
 ```
 
 ## Micro SaaS Potential
